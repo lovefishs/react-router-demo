@@ -23,7 +23,8 @@ module.exports = {
             loader: 'babel-loader',
             options: {
               presets: [['env', { modules: false }], 'react'],
-              plugins: ['transform-class-properties', 'syntax-dynamic-import', 'transform-decorators-legacy'], // transform-runtime
+              // 装饰器插件的位置顺序非常重要，see: https://github.com/mobxjs/mobx/issues/105
+              plugins: ['transform-decorators-legacy', 'transform-decorators', 'syntax-dynamic-import', 'transform-class-properties', 'transform-runtime'],
             },
           },
         ],
