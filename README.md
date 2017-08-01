@@ -5,7 +5,7 @@
 ## Usage
 
 ```bash
-git clone git@192.168.1.121:front-end/react-router-demo.git
+git clone .../react-router-demo.git
 cd react-router-demo
 npm install
 
